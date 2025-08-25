@@ -447,9 +447,9 @@ class StatsView(discord.ui.View):
 
 
 # --- Commandes du bot ---
-@bot.tree.command(name="duel", description="Lancer un duel de Puissance 4 avec un montant.")
+@bot.tree.command(name="sleeping", description="Lancer un duel de Puissance 4 avec un montant.")
 @app_commands.describe(montant="Montant misé en kamas")
-async def duel(interaction: discord.Interaction, montant: int):
+async def sleeping(interaction: discord.Interaction, montant: int):
     if interaction.channel.id != ID_SALON_PUISSANCE_4:
         await interaction.response.send_message("❌ Cette commande ne peut être utilisée que dans le salon de Puissance 4.", ephemeral=True)
         return
